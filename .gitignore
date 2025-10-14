@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.env
+pip-log.txt
+pip-delete-this-arg.txt
+.pytest_cache/
+.mypy_cache/
+htmlcov/
+.coverage
+.coverage.*
+.tox/
+dist/
+build/
+*.egg-info/
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.DS_Store
+Thumbs.db
+
+# Logs and Temporary files
+*.log
+*.tmp
+tmp/
+
+# Database files
+*.sqlite3
+*.db
+*.bak
+
+# Configuration files (if not meant for version control)
+# Consider if these should be in .env and .env ignored instead
+# config.ini
+# settings.py
+
+# FastAPI specific (if applicable, depending on your setup)
+# For example, if you generate API documentation locally and don't want to commit it
+# docs/
+# static/ (if generated content)
