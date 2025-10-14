@@ -20,3 +20,11 @@ def read_items(item_id:int):
 @app.get("/items/{item_id}/orders/{order_id}/")
 def read_items(item_id:int,order_id:int):
     return {"item_id":item_id,"order_id":order_id}
+
+# Path parameters with string types and slug usage
+# Slugs often include - and letters. No int conversion needed.
+
+@app.get("/posts/{slug}/")
+def read_post(slug:str):
+    return{"slug":slug}
+
