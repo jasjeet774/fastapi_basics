@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 
+from fastapi import Query
 # Create an instance of the FastAPI class
 app = FastAPI()
 
@@ -27,4 +28,22 @@ def read_items(item_id:int,order_id:int):
 @app.get("/posts/{slug}/")
 def read_post(slug:str):
     return{"slug":slug}
+
+#query parameters
+
+@app.get("/search")
+def search(q:str|None=None):
+    return {"query":q}
+
+
+# Query(...) marks it required (... is Ellipsis).
+@app.get("/search")
+def search(q: str = Query(...)):  # required
+    return {"query": q}
+
+# Path + query together
+
+@app.get("/product/{product_id}")
+def get_products(product_id:int,details:bool=False):
+    return {"product_id":product_id,"details":details}
 
